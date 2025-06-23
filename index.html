@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>Alimak Store</title>
+            <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <header>
+            <img src="logo.png" alt="Logo Alimak Store" style="max-width: 1200px; height: auto; display: block; margin: 10px;" />
+            <h1>Alimak Store</h1>
+            <p>Ofertas incríveis selecionadas especialmente para você</p>
+        </header>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar produto..."
+                onkeyup="searchProducts()"
+            />    
+          
+            <div id="categoryButtons" style="display:flex; gap: 15px; justify-content:center; margin: 20px 0; flex-wrap: nowrap; overflow-x: auto;">
+                <div class="category-btn" data-category="todos" style="cursor:pointer; text-align:center;">
+                   <img src="Alimak.png" alt="todos" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                   <p>Todos</p>
+                </div> 
+                
+                <div class="category-btn" data-category="moveis" style="cursor:pointer; text-align:center;">
+                  <img src="moveis.png" alt="moveis" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                  <p>Móveis</p>
+                </div>
+
+                <div class="category-btn" data-category="eletrodomesticos" style="cursor:pointer; text-align:center;">
+                  <img src="eletrodomesticos.png" alt="eletrodomesticos" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                  <p>Eletrodomésticos</p>
+                </div>
+
+                <div class="category-btn" data-category="roupas-femininas" style="cursor:pointer; text-align:center;">
+                    <img src="roupafeminina.png" alt="roupas-femininas" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                    <p>Roupas Femininas</p>
+                </div>
+
+                <div class="category-btn" data-category="informatica" style="cursor:pointer; text-align:center;">
+                    <img src="informatica.png" alt="informatica" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                    <p>Informática</p>
+                </div>
+
+                <div class="category-btn" data-category="cozinha" style="cursor:pointer; text-align:center;">
+                    <img src="Cozinha.png" alt="cozinha" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                    <p>Cozinha</p>
+                </div>
+            
+                <div class="category-btn" data-category="friends" style="cursor:pointer; text-align:center;">
+                  <img src="38beb208f10679f392e6a6e4dd78d133.jpg" alt="friends" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                  <p>Friends</p>
+              </div>
+
+              <div class="category-btn" data-category="achadinhos" style="cursor:pointer; text-align:center;">
+                <img src="achadinhos.png" alt="achadinhos" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                <p>Achadinhos</p>
+            </div>
+
+                <!-- adicione mais categorias aqui -->
+            </div>
+ 
+
+        <div class="container" id="productContainer">
+            <!-- Produto Exemplo 1 -->
+            <div class="product" data-category="roupas-femininas">
+                <img src="br-11134207-7r98o-m8mh94myz6y998.webp" alt="Produto 1"/>
+                    <div class="product-info">
+                        <h3>Vestido feminino tecido viscolinho com alça regulavel</h3>
+                        <p>O vestido ideal para dias de sol! Feito em viscolinho leve e fresco, com alças reguláveis para ajuste perfeito. Versátil, combina com tênis, sandálias ou acessórios elegantes. Conforto e estilo em uma só peça — para você se sentir linda em qualquer ocasião!. Confira esta oferta exclusiva!</p>
+                        <a href="https://s.shopee.com.br/6KsMHf0CrI" target="_blank">Ver na Shopee</a>
+                    </div>
+                </div>
+
+            <!-- Produto Exemplo 23 -->
+     <div class="product" data-category="informatica">
+        <img src="ae2b57594c9939b7b425606558126d3f.webp" alt="Produto 23">
+        <div class="product-info">
+          <h3>Smartphone celular Motorola Moto G05 128GB Cinza 4G 4GB RAM 6,7" 50MP Selfie 8MP </h3>
+          <p>O smartphone Motorola Moto g05 Cinza vai te surpreender com tanta tecnologia envolvida para proporcionar a melhor experiência de uso. A câmera traseira é de 50MP com IA, Night Vision automático e a frontal, de 8MP. A tela IPS de 6,7" com proteção Gorilla Glass 3 oferece oferecendo clareza até sob a luz direta do sol. Ele é equipado com 128GB de armazenamento interno, memória RAM de 4GB (Expansível em + 8GB com RAM Boost) e processador Helio G81 (2,0GHz Octa-Core).</p>
+          <a href="https://www.magazinevoce.com.br/magazinekamilavendas04/smartphone-motorola-moto-g05-128gb-cinza-4g-4gb-ram-67-50mp-selfie-8mp/p/238940000/te/srmt/"_blank">Ver na Magalu</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 2 -->
+       <div class="product" data-category="moveis">
+        <img src="01ceccc1a55317c376437e62b05132d2.webp" alt="Produto 2">
+        <div class="product-info">
+          <h3>Sofá Retrátil e Reclinável 2 lugares com Molas 1,50m Livia Suede Cinza Adonai Estofados</h3>
+          <p>Conforto, qualidade e praticidade, é o que você vai encontrar no Sofá Livia, um produto pensado para juntar essas 3 qualidades em um só.
+      O produto que além de tudo isso vai deixar seu ambiente muito mais bonito e elegante, a peça para levar sua sala a outro nível. Ótimo custo-benefício!</p>
+          <a href="https://www.magazinevoce.com.br/magazinekamilavendas04/sofa-retratil-e-reclinavel-2-lugares-com-molas-150m-livia-suede-cinza-adonai-	estofados/p/ea1ea504de/mo/esto/" target="_blank">Ver na Magalu</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 3 -->
+       <div class="product" data-category="informatica">
+        <img src="8317ba770e47346614be8049a18197c4.webp" alt="Produto 3">
+        <div class="product-info">
+          <h3>Cadeira Gamer Otello Preto e Vermelho</h3>
+          <p>Para você que é fanático por games, além de ter equipamentos eletrônicos que elevem o seu nível de jogabilidade, precisa de equipamentos que melhorem a 	ergonomia nos momentos dos jogos para não ser um momento desconfortável. E uma cadeira gamer pode ajudar e você terminar sua rodada de games sem sentir dores 	nas costas ou na região lombar. Ótimo custo-benefício!</p>
+          <a href="https://www.magazinevoce.com.br/magazinekamilavendas04/cadeira-gamer-otello-preto-e-vermelho/p/237019000/mo/mecg/" target="_blank">Ver na Magalu</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 4 -->
+       <div class="product" data-category="cozinha">
+        <img src="sg-11134201-7rcdu-m65zeyzsn048cc.webp" alt="Produto 4">
+        <div class="product-info">
+          <h3>Frigideira Dividida Antiaderente com 3 Compartimentos e Cabo de Madeira</h3>
+          <p>Quer mais praticidade na cozinha? Com a Frigideira Dividida Antiaderente, você pode preparar três tipos de alimentos ao mesmo tempo, sem misturar sabores e 	sem precisar usar várias panelas. Ideal para fritar ovos, panquecas, mini hambúrgueres, tapiocas e muito mais, essa frigideira é perfeita para quem deseja 	refeições rápidas e bem preparadas. Ótimo custo-benefício!</p>
+          <a href="https://s.shopee.com.br/9KVufK7avy" target="_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 5 -->
+       <div class="product" data-category="informatica">
+        <img src="br-11134207-7r98o-m6xeejx6raef3a.webp" alt="Produto 5">
+        <div class="product-info">
+          <h3>Suporte Magnético Para Celular Dobrável Carro Multifuncional 360 ° De Telefone De Mesa</h3>
+          <p>Compacto e resistente, este suporte é ideal para carro, casa ou escritório. Possui ajuste de ângulo, design dobrável, base antiderrapante e fixação firme — tudo com operação fácil usando apenas uma mão. Ótimo custo-benefício!</p>
+          <a href="https://s.shopee.com.br/3VY7j2W5vH" target="_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 6 -->
+       <div class="product" data-category="moveis">
+        <img src="br-11134207-7r98o-mad5azrqt1x516.webp" alt="Produto 6">
+        <div class="product-info">
+          <h3>Espelho Decorativo Oval 80x50 Vidro Lapidado Decoração Moderna Elegante Banheiro Sala quarto </h3>
+          <p>Espelho Oval Lapidado 50x80cm. Design moderno | Borda polida | Fixação sem furo (exceto banheiro). Deixe seu ambiente mais bonito e sofisticado com este espelho decorativo de 50x80cm! Ideal para sala, quarto, hall ou closet. Perfeito para quem busca praticidade e estilo com acabamento impecável! Ótimo custo-benefício!</p>
+          <a href="https://s.shopee.com.br/10qhgd3Fg1"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 7 -->
+       <div class="product" data-category="moveis">
+        <img src="br-11134207-7r98o-m0oxl1vag8ld37.webp" alt="Produto 7">
+        <div class="product-info">
+          <h3>Kit com 3 Quadros Decorativos + Frase Abençoados por Deus - Decoração para Sala e Quarto em mdf</h3>
+          <p>Produzido em MDF com espessura de 3mm na cor Preto Fosco.
+            Com ele, você consegue decorar diversos ambientes de sua casa, sendo sala, cozinha ou onde preferir, tornando seu ambiente ainda mais lindo e completo.
+            Utilizamos tinta ecológica sem cheiro, com qualidade total para destacar sua decoração. Tomamos muito cuidado ao embalarmos, para que chegue tudo perfeito em sua casa. Ótimo custo-benefício!</p>
+          <a href="https://s.shopee.com.br/5AgGeJma8Q"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 8 -->
+       <div class="product" data-category="moveis">
+        <img src="br-11134207-7r98o-ltwjwwwq5uudff.webp" alt="Produto 8">
+        <div class="product-info">
+          <h3>Capa Para Colchão Impermeavel Matelado Com Elastico </h3>
+          <p>Mantenha seu colchão protegido com conforto e praticidade! Este protetor 100% impermeável possui acabamento matelado ultrassônico (sem costuras), toque macio e elástico em toda a volta, garantindo ajuste firme. Além de proteger contra líquidos, é antiácaro, antialérgico, antifungo e antimofo. Disponível em diversos tamanhos – de mini berço ao king size. Pode ser lavado na máquina. Ideal para quem busca higiene, durabilidade e bem-estar. Ótimo custo-benefício!</p>
+          <a href="https://s.shopee.com.br/4AnjSV3BSz"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 9 -->
+       <div class="product"  data-category="moveis">
+        <img src="br-11134207-7r98o-ltpld3i6y3p4e5.webp" alt="Produto 9">
+        <div class="product-info">
+          <h3>Kit Cobre Leito Dupla Face Paris Queen 08 Peças Original </h3>
+          <p>Transforme seu quarto com elegância e conforto! Este kit de cobre leito queen é confeccionado com tecido 100% poliéster, matelassê com costura para maior durabilidade e toque macio de 180 fios. A versão Paris é dupla face com tons neutros clássicos, enquanto o modelo Elegance possui face única com o mesmo padrão de qualidade. Acompanha almofadas decorativas e refis, criando um visual sofisticado e completo. Produto resistente, de alta qualidade e com envio super rápido! Ótimo custo-benefício!</p>
+          <a href="https://s.shopee.com.br/3frSrbMHY0"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 10 -->
+       <div class="product"  data-category="moveis">
+        <img src="br-11134207-7r98o-lwhm9fjd237958.webp" alt="Produto 10">
+        <div class="product-info">
+          <h3>Kit com 2 Mesa de Cabeceira Retrô Com 1 Gaveta Sleep Decor - Cores </h3>
+          <p>Ideal para ambientes compactos, a Mesa de Cabeceira Sleep foi desenvolvida para quartos com espaços reduzidos, tornando o seu ambiente muito mais funcional, organizado e confortável! Nosso móvel é a solução perfeita para o seu dilema de organização no quarto. Com uma gaveta espaçosa, uma prateleira para armazenamento adicional e um nicho para acomodar seus livros favoritos, esta mesa de cabeceira é a resposta para manter tudo ao seu alcance quando você mais precisa.
+            Imagine acordar de manhã, esticar o braço e encontrar tudo o que precisa sem sair da cama. A organização nunca foi tão fácil e acessível. . Ótimo custo-benefício!</p>
+          <a href="https://s.shopee.com.br/4AnjSXkRRy"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 11 -->
+       <div class="product"  data-category="moveis">
+        <img src="br-11134207-7r98o-m1spidm5damg5b.webp" alt="Produto 11">
+        <div class="product-info">
+          <h3>Kit 10 Peças Cabeceira Premium Modular Estofada 40x30cm Cada Peça Várias Cores </h3>
+          <p>Renove seu quarto com praticidade! Cada unidade da cabeceira estofada (40x30cm) já acompanha fita dupla face original para fixação — sem furos, sem sujeira. Ideal para criar um visual moderno e confortável com fácil aplicação. Perfeita para quem busca estilo e praticidade! Ótimo custo-benefício!</p>
+          <a href="https://s.shopee.com.br/30bm3fXnIz"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 12 -->
+       <div class="product"  data-category="cozinha">
+        <img src="br-11134207-7r98o-m6ouku4k00fk2f.webp" alt="Produto 12">
+        <div class="product-info">
+          <h3>Kit 6 Potes de Vidro 200ml com Tampa de Bambu | Hermético à Prova de Odores + Empilhável </h3>
+          <p>Organize sua cozinha com charme e praticidade! O kit inclui 6 potes de vidro de 200ml com tampas de bambu natural e vedação excelente, ideais para armazenar grãos, molhos, petiscos e muito mais. Design elegante, ecológico e funcional – perfeito para manter seus alimentos frescos e sua cozinha moderna. Ótimo custo-benefício!</p>
+          <a href="https://s.shopee.com.br/3frSqui3I4"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 13 -->
+       <div class="product" data-category="moveis">
+        <img src="br-11134207-7r98o-lwy87au2sc736b.webp" alt="Produto 13">
+        <div class="product-info">
+          <h3>Kit 6 Peças Conjunto de Faca Churrasco Carne Legumes Descascador Tesoura Profissional</h3>
+          <p>Complete sua cozinha com este elegante e funcional conjunto de facas! Com lâminas afiadas em aço inoxidável, revestimento resistente e design moderno nas cores preta ou colorida, o kit oferece praticidade e precisão no preparo das suas receitas. Ideal para uso diário!</p>
+          <a href="https://s.shopee.com.br/2VfVStwSbw"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 14 -->
+       <div class="product" data-category="informatica">
+        <img src="br-11134207-7r98o-lrretu3xa4v8c0.webp" alt="Produto 14">
+        <div class="product-info">
+          <h3>Projetor Wi-fi lançamento Portátil com Android HDMI Smart Cinema Hy300 4k HD </h3>
+          <p>Transforme qualquer ambiente em um verdadeiro cinema! Com resolução HD (1280x720dpi), brilho de 8000 lúmens, conexão Bluetooth e sistema Android integrado, este projetor oferece praticidade e qualidade. Projeção de 40" a 200", som embutido, controle remoto e correção automática de imagem. Ideal para filmes, apresentações e games!</p>
+          <a href="https://s.shopee.com.br/7V4CfiV6Q2"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 15 -->
+       <div class="product" data-category="eletrodomesticos">
+        <img src="br-11134207-7r98o-m1go0dz2vmywbf.webp" alt="Produto 15">
+        <div class="product-info">
+          <h3>Mini Ferro De Passar Roupas A Vapor Para Viagem | Elétrico Portátil Pequeno/Casa </h3>
+          <p> O Mini Ferro De Passar Roupas É Excelente Para Viagem E Uso Doméstico. Ela Mantém A Temperatura Constante De Aproximadamente 150 Graus. Possui Medidas Adequadas Para Ocupar Pouquíssimo Espaço Em Sua Mala Ou Mochila. A Sua Capacidade De Armazenamento Interno Para Água É Aproximadamente 60 Ml, O Copinho Está Incluído No Kit. Possui Um Excelente Manejo, Pesando Apenas 360 Gramas, É Excelente Para Passar Roupas De Tecidos Variados. </p>
+          <a href="https://s.shopee.com.br/BHbwHig4v"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 16 -->
+       <div class="product" data-category="eletrodomesticos">
+        <img src="sg-11134201-7rd63-lv5blm1alp5fdc.webp" alt="Produto 16">
+        <div class="product-info">
+          <h3>Umidificador Difusor De Aroma De design Nuvem e Chuva 7 Cores Luz Noturna Doméstica</h3>
+          <p>Transforme seu ambiente com este lindo umidificador em formato de nuvem! Com design inovador e som relaxante de chuva, ele umidifica, ilumina e acalma ao mesmo tempo. Ideal para relaxar, dormir melhor ou decorar com estilo.</p>
+          <a href="https://s.shopee.com.br/yC4BaKm4"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 17 -->
+       <div class="product" data-category="cozinha">
+        <img src="br-11134207-7r98o-lv75kyl1nmhb24.webp" alt="Produto 17">
+        <div class="product-info">
+          <h3>torneira cozinha parede 360 Rotação 4-Funções Bocal De Alta Pressão 1/4 de Volta </h3>
+          <p>Moderna, funcional e resistente, esta torneira é ideal para quem busca praticidade e estilo. Fabricada em metal à prova de ferrugem, possui bico giratório e carretel em cerâmica para maior durabilidade e conforto no uso.</p>
+          <a href="https://s.shopee.com.br/8UwlfEkBNp"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 18 -->
+       <div class="product" data-category="informatica">
+        <img src="4b53dc490284fc880b0034fcc4bd774f.webp" alt="Produto 18">
+        <div class="product-info">
+          <h3> Cadeira de Escritório Diretor Giratória Preta - DIR-002 Otello</h3>
+          <p>A cadeira de escritório DIR-002 preta da Otello possui estilo diretor, é giratória e com revestimento estofado e assento acolchoado. Isso facilita o seu dia a dia, como pegar arquivos ou se movimentar de um lado para o outro. Com um peso suportado de até 80Kg, tem assento e pés reguláveis para que você usufrua o que esta cadeira pode lhe oferecer. Este produto não é indicado para uso contínuo. Além disso, a escolha de uma cadeira de escritório correta é imprescindível, tanto para a saúde quanto para a produtividade! Atenção: A tonalidade da cor do tecido pode variar de acordo com o lote do fabricante.</p>
+          <a href="https://www.magazinevoce.com.br/magazinekamilavendas04/cadeira-de-escritorio-diretor-giratoria-preta-dir-002-otello/p/235409800/mo/cdpd/"_blank">Ver na Magalu</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 19 -->
+       <div class="product" data-category="cozinha">
+        <img src="5f3f90d968b2bfea72776a5abe70ca23.webp" alt="Produto 19">
+        <div class="product-info">
+          <h3> Cooktop 5 Bocas Itatiaia Essencial Preto Bivolt</h3>
+          <p> Com design moderno e mesa em vidro temperado, o cooktop Itatiaia Essencial transforma sua cozinha com elegância e desempenho. Conta com 5 queimadores potentes, acendimento automático e trempes resistentes, ideal para quem busca agilidade e segurança no preparo das refeições.</p>
+          <a href="https://www.magazinevoce.com.br/magazinekamilavendas04/cooktop-5-bocas-itatiaia-essencial-preto-bivolt/p/be0fb977fc/ed/ck5b/"_blank">Ver na Magalu</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 20 -->
+       <div class="product" data-category="roupas-femininas">
+        <img src="4027520ca6ab6089d9b8ad48aafe66e5.webp" alt="Produto 20">
+        <div class="product-info">
+          <h3> Saia Elanca Plissada Midi Social Moda Evangélica Feminina</h3>
+          <p>Com caimento leve e tecido plissado em helanca, essa saia é a escolha perfeita para quem busca estilo e praticidade. Ideal para compor looks do casual ao sofisticado, ela se adapta ao seu estilo em qualquer ocasião!</p>
+          <a href="https://s.shopee.com.br/4fk8Ia2clQ"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 21 -->
+       <div class="product" data-category="roupas-femininas">
+        <img src="br-11134207-7r98o-lvy18tfw3h6d41.webp" alt="Produto 21">
+        <div class="product-info">
+          <h3>Saia Longa Feminina Alfaiataria Moda Evangélica Casual Básica Inverno Cintura Alta </h3>
+          <p>Calça Feminina Alfaiataria com Bolso – Elegância e Conforto no Seu Dia a Dia. Modelo feito sob medida com tecido de alfaiataria de alta qualidade, pensado para valorizar o corpo feminino com conforto, estilo e sofisticação. Ideal para compor looks modernos e versáteis!</p>
+          <a href="https://s.shopee.com.br/4q3YUql87n"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 22 -->
+       <div class="product" data-category="friends">
+        <img src="fb59489b98f5c8819c7dbfcb38fbfee6@resize_w450_nl.webp" alt="Produto 22">
+        <div class="product-info">
+          <h3> Blusa Moletom Canguru Friends Central Perk Unissex Capuz.</h3>
+          <p>Se você ama a série Friends, este moletom é para você! Estiloso, confortável e com estampa de alta qualidade, é perfeito para maratonar episódios ou montar aquele look despojado cheio de personalidade.</p>
+          <a href="https://s.shopee.com.br/4Anq7IHUYP"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 24 -->
+       <div class="product" data-category="friends">
+        <img src="br-11134207-7r98o-m4fbm9694v2993.webp" alt="Produto 24">
+        <div class="product-info">
+          <h3>Garrafa Térmica Série Friends Com Termômetro Digital - 500ml</h3>
+          <p>Leve um pedacinho do Central Perk com você! 🛋️✨ 
+            Se você é fã de Friends, essa garrafa térmica é a sua cara! Com um design exclusivo e funcionalidade moderna, ela vai te acompanhar em todas as situações – seja no trabalho, na academia ou na hora de maratonar a série!</p>
+          <a href="https://s.shopee.com.br/7081USlaF9"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 25 -->
+       <div class="product" data-category="moveis">
+        <img src="9b4d8ce98e6a3e93ce393e425f155ca7.webp" alt="Produto 25">
+        <div class="product-info">
+          <h3>Penteadeira e Escrivaninha de Canto 1 Porta Star Belaflex - Mobler </h3>
+          <p>Penteadeira e Escrivaninha de Canto 1 Porta Star Belaflex
+             A Penteadeira e Escrivaninha de Canto 1 Porta Star Belaflex é um móvel que foi projetado seguindo tendências italianas. Além das funcionalidades de uma escrivaninha, possui espaço organizador, com vidros de correr, para objetos e jóias, contendo também um painel fixo com espelho. Versatilidade é tudo, não é mesmo? Possui porta convencional com dobradiça metálica, pintura UV, acabamento fosco.</p>
+          <a href="https://www.magazinevoce.com.br/magazinekamilavendas04/penteadeira-e-escrivaninha-de-canto-1-porta-star-belaflex-mobler/p/kd3h55e2h4/mo/ptdr/"_blank">Ver na Magalu</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 26 -->
+       <div class="product" data-category="informatica">
+        <img src="br-11134207-7r98o-m8nmqtiby3695e.webp" alt="Produto 26">
+        <div class="product-info">
+          <h3>Smart Touch Screen Tv Com Tela 21 Polegadas Android Portátil marca Tomate MTM-2105 Com NF-e</h3>
+          <p>A Smart Touch Screen TV da marca Tomate é a solução ideal para quem busca versatilidade e tecnologia em um único dispositivo. Com uma tela de 21 polegadas, este modelo portátil oferece uma experiência visual imersiva, perfeita para assistir a filmes, séries ou jogar. Seu sistema Android permite acesso a uma vasta gama de aplicativos, garantindo entretenimento sem limites.</p>
+          <a href="https://s.shopee.com.br/8AK4Y97LAp"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 27 -->
+       <div class="product" data-category="achadinhos">
+        <img src="sg-11134201-7rcel-ltfr6iq68cxfd3.webp" alt="Produto 27">
+        <div class="product-info">
+          <h3> Prensa Térmica de Canecas Cricut Mug Press 500W 220V - Branco</h3>
+          <p>  A Cricut Mug Press é uma prensa térmica que permite fazer sublimação personalizada em canecas de cerâmica Cricut compatíveis com materiais sublimáticos da linha Cricut Infusible Ink. A prensa Mug Press não possui configurações manuais de temperatura ou pressão, o que deixa tudo muito mais fácil na hora de personalizar canecas com desenhos e/ou textos exclusivos e sofisticados.</p>
+          <a href="https://s.shopee.com.br/qXToXY1Ml"_blank">Ver na Shopee</a>
+        </div>
+       </div>
+  
+        <!-- Produto Exemplo 28 -->
+       <div class="product" data-category="cozinha">
+        <img src="4f89f2a1eb18a29b7ea828213deedcc4.webp" alt="Produto 28">
+        <div class="product-info">
+          <h3>Fritadeira Sem Óleo 3L Cadence Dream Rosé Gold </h3>
+          <p>Sonho e glamour na sua cozinha! A única em Rosé Gold. Uma cor exclusiva para transformar a sua 
+            cozinha. A Fritadeira Cadence Dream tem 3L de capacidade, espaço de sobra para carnes, bolos, 
+            empanados, legumes e muito mais. Tem botão digital com 7 funções pré-programadas para simplificar 
+            ainda mais a sua vida e muito mais saúde com o cozimento por convecção, que frita os alimentos com 
+            ar quente, sem uso de óleo. </p>
+          <a href="https://www.magazinevoce.com.br/magazinekamilavendas04/fritadeira-sem-oleo-3l-cadence-dream-rose-gold/p/cj6adjk4g5/ep/efso/"_blank">Ver na Magalu</a>
+        </div>
+       </div>
+
+        <!-- Produto Exemplo 29 -->
+        <div class="product" data-category="friends">
+          <img src="br-11134201-23010-ju4453mzujmvd5.webp" alt="Produto 29">
+          <div class="product-info">
+            <h3>Caneca Com Colher Série Friends Várias Cores</h3>
+            <p>Para os verdadeiros fãs de Friends! Esta caneca de cerâmica (325ml) vem com uma charmosa 
+              colher acoplada e estampa dupla: de um lado, o icônico sofá do Central Perk; do outro, o famoso 
+              logo da cafeteria mais amada da TV. Perfeita para seu café, chá ou aquele chocolate quente 
+              assistindo sua série favorita. </p>
+            <a href="https://s.shopee.com.br/9f8zBTOZIn"_blank">Ver na Shopee</a>
+          </div>
+        </div>
+          
+        <!-- Produto Exemplo 30 -->
+        <div class="product" data-category="achadinhos">
+          <img src="br-11134207-7r98o-m5ykvqyooywi19.webp" alt="Produto 30">
+          <div class="product-info">
+            <h3>Bolsa Terno Esportiva Viagem Impermeável Dobrável Grande Capacidade</h3>
+            <p>Esta bolsa de viagem e academia é ideal para quem precisa de espaço sem abrir mão da elegância. 
+              Feita em poliéster de alta qualidade, possui grande capacidade de 60 litros, perfeita para 
+              viagens curtas ou longas. Com duas alças de mão, alça lateral removível, porta calçados, porta 
+              gravata e compartimentos bem distribuídos, oferece organização e conforto em qualquer ocasião. </p>
+            <a href="https://s.shopee.com.br/VukGjUJ9t"_blank">Ver na Shopee</a>
+          </div>
+        </div>  
+
+        <!-- Produto Exemplo 31 -->
+        <div class="product" data-category="achadinhos">
+          <img src="br-11134207-7r98o-m9jt0e2mmiwp04.webp" alt="Produto 31">
+          <div class="product-info">
+            <h3>Cadeira Escritório Gamer Estudo Ergonômica Ajustável Apoio Lombar Preto/Branco/Cinza/Rosa</h3>
+            <p>Conforto, estilo e tecnologia para seu dia a dia! Com design moderno e cores versáteis, esta
+               cadeira oferece ergonomia avançada com encosto anatômico, suporte lombar com mola ajustável, 
+               assento de alta densidade e ajustes personalizados. Ideal para gamers, profissionais e quem
+              valoriza bem-estar, garante conforto duradouro, postura correta e elegância em qualquer 
+              ambiente. </p>
+            <a href="https://s.shopee.com.br/7phL07vXfp"_blank">Ver na Shopee</a>
+          </div>
+        </div>  
+
+        <!-- Produto Exemplo 32 -->
+        <div class="product" data-category="eletrodomesticos">
+          <img src="440b947a97ea486a4d36a6bb9d005140.webp" alt="Produto 32">
+          <div class="product-info">
+            <h3>Cafeteira Elétrica Mondial Dolce Arome Digital - 32 Cafés Preta e Inox</h3>
+            <p>Com a Cafeteira Elétrica Dolce Arome Digital C-44-32X-SDI da Mondial, você garante um café 
+              mais saboroso e quentinho para toda a família. A capacidade é de 32 xícaras, jarra em vidro 
+              conservando melhor o café e, disponível na cor preta e com acabamento em aço inox garante beleza 
+              e um visual moderno para a sua cozinha.  </p>
+            <a href="https://www.magazinevoce.com.br/magazinekamilavendas04/cafeteira-eletrica-mondial-dolce-arome-digital-32-cafes-preta-e-inox/p/236674000/ep/cafe/"_blank">Ver na Magalu</a>
+          </div>
+        </div>  
+        
+            <!-- Duplique e altere os produtos aqui -->
+        </div>
+
+        <footer>
+            <p  class="negrito" style="color:#094459;">Feito por: Kamila Silvestre dos Santos</p>
+            <p  style="color:#094459;"> <span class="negrito">Instagram: </span> <a style="color:black;" href="https://www.instagram.com/storealimak/">@storealimak</a> </p>
+            <p  style="color:#094459;"> <span class="negrito">E-mail:</span> <a style="color: black;" href="mailto:kamilavendasmagalu@gmail.com">kamilavendasmagalu@gmail.com</a> </p>
+            <p>&copy; <span class="negrito">2025 Alimak Store - Todos os direitos reservados </span></p>
+        </footer>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
